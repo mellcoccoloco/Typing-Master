@@ -44,12 +44,23 @@ def main(page: ft.Page):
 
     check_button = ft.ElevatedButton("Check ✨", on_click=check_word)
 
+    def restart_game(e):
+        nonlocal score
+        score = 0
+        random.shuffle(word_list)
+        word_display.value = word_list[0]
+        user_input.value = ""
+        result_text.value = ""
+        score_text.value = "Score: 0"
+        page.update()
+
+    restart_button = ft.ElevatedButton("Restart 💕", on_click=restart_game)
+
     page.add(
         word_display,
         user_input,
         result_text,
         score_text,
-        check_button
+        check_button,
+        restart_button
     )
-
-ft.app(target=main)
