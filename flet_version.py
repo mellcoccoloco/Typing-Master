@@ -64,3 +64,5 @@ def main(page: ft.Page):
         check_button,
         restart_button
     )
+
+ft.app(target=main)
