@@ -82,9 +82,5 @@ def main(page: ft.Page):
         check_button,
         restart_button
     )
-<<<<<<< HEAD
 
 ft.app(target=main)
-=======
-ft.app(target=main)
->>>>>>> 22fea2c (fixed code)
